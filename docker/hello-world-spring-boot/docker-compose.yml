@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  helloworldspringboot:
+    build:
+      context: .
+    image: helloworldspringbootdc
+    container_name: containerhelloworldspringboot
+    networks:
+      - minharedenova
+    ports:
+      - "81:8080"
+
+networks:
+  minharedenova:
+    driver: bridge
