@@ -10,7 +10,7 @@ services:
     volumes:
       - ./node-app:/usr/src/app
     tty: true
-    command: ["node", "/usr/src/app/index.js"]
+    command: sh -c "npm install && node /usr/src/app/index.js"
   nginx:
     build:
       context: nginx-app
